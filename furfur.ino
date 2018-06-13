@@ -8,7 +8,10 @@
 
 /* Libraries
 /* ---------------------------------------------------------------------------*/
+#include <Adafruit_CircuitPlayground.h>
+#include "remote_codes.h"
 #include "FastLED.h"
+
 
 /* Constants
 /* ---------------------------------------------------------------------------*/
@@ -25,28 +28,29 @@
 #define NUM_WING_LEDS 24
 #define NUM_BOARD_LEDS 10
 
-#define BRIGHTNESS 255
-#define ANIMATION_SPEED 120
+/* Variables
+/* ---------------------------------------------------------------------------*/
+uint8_t gHue = 0;
+uint8_t start_index = 0;
+uint8_t step_index = 4;
+uint8_t brightness = 255;
+int animation_speed = 120;
+uint8_t animation_state = 1;
+boolean cycle_animations = true;
 
 /* Palette Declarations
 /* ---------------------------------------------------------------------------*/
 
+CRGBPalette16 current_antler_palette;
+CRGBPalette16 current_face_palette;
+CRGBPalette16 current_wing_palette;
+CRGBPalette16 current_board_palette;
 
-/* Setup
-/* ---------------------------------------------------------------------------*/
-CRGB antler_leds[NUM_ANTLER_LEDS];
-CRGB face_leds[NUM_FACE_LEDS];
-CRGB wing_leds[NUM_WING_LEDS];
-CRGB board_leds[NUM_BOARD_LEDS];
+CRGBPalette16 target_antler_palette;
+CRGBPalette16 target_face_palette;
+CRGBPalette16 target_wing_palette;
+CRGBPalette16 target_board_palette;
 
-void setup() {
-  delay(3000);
 
-  FastLED.addLeds<LED_TYPE,ANTLER_DATA_PIN,COLOR_ORDER>(antler_leds, NUM_ANTLER_LEDS).setCorrection(TypicalLEDStrip);
-  FastLED.addLeds<LED_TYPE,FACE_DATA_PIN,COLOR_ORDER>(face_leds, NUM_FACE_LEDS).setCorrection(TypicalLEDStrip);
-  FastLED.addLeds<LED_TYPE,WING_DATA_PIN,COLOR_ORDER>(wing_leds, NUM_WING_LEDS).setCorrection(TypicalLEDStrip);
-  FastLED.addLeds<LED_TYPE,BOARD_DATA_PIN,COLOR_ORDER>(board_leds, NUM_BOARD_LEDS).setCorrection(TypicalLEDStrip);
-
-  // set master brightness control
-  FastLED.setBrightness(BRIGHTNESS);
-}
+// Note to self: Can set brightness of individual strips:
+// https://github.com/FastLED/FastLED/wiki/Multiple-Controller-Examples
