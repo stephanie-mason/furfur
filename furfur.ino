@@ -33,6 +33,7 @@ uint8_t gHue = 0;
 uint8_t start_index = 0;
 uint8_t step_index = 4;
 uint8_t brightness = 255;
+uint8_t idle_brightness = 40;
 int animation_speed = 120;
 uint8_t animation_state = 1;
 boolean cycle_animations = true;
