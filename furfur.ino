@@ -12,7 +12,6 @@
 #include "remote_codes.h"
 #include "FastLED.h"
 
-
 /* Constants
 /* ---------------------------------------------------------------------------*/
 #define LED_TYPE WS2812B
@@ -40,6 +39,9 @@ boolean cycle_animations = true;
 
 /* Palette Declarations
 /* ---------------------------------------------------------------------------*/
+extern const TProgmemPalette16 pink_split_comp_p PROGMEM;
+extern const TProgmemPalette16 red_comp_p PROGMEM;
+extern const TProgmemPalette16 red_mono_p PROGMEM;
 
 CRGBPalette16 current_antler_palette;
 CRGBPalette16 current_face_palette;

@@ -1,8 +1,26 @@
 void select_animation() {
     switch(animation_state) {
       case 1:
+        /* Strand tests
+        /* -------------------------------------------------------------------------*/
+        fill_solid(antler_leds, NUM_ANTLER_LEDS, CRGB::Red);
+        fill_solid(face_leds, NUM_FACE_LEDS, CRGB::Green);
+        fill_solid(wing_leds, NUM_WING_LEDS, CRGB::Blue);
+        fill_rainbow(board_leds, NUM_BOARD_LEDS, gHue, 7);
         break;
       case 2:
+        current_antler_palette = red_mono_p;
+        current_face_palette = pink_split_comp_p;
+        current_wing_palette = red_comp_p;
+        current_board_palette = Rainbow_gp;
+
+        fill_antlers();
+        fill_face();
+        fill_wings();
+        fill_board();
+
+        //I think these cases will actually just update "target_pallete" once
+        // things are in place. probably the fill functions can just move to loop.
         break;
       case 3:
         break;
