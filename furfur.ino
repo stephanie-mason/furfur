@@ -5,10 +5,13 @@
 /* He speaks only lies, unless brought into a triangle wherein he speaks truth.
 /* AKA THE LIFE OF THE PARTY
 /******************************************************************************/
-/*** LIBRRARIES ***/
+
+/* Libraries
+/* ---------------------------------------------------------------------------*/
 #include "FastLED.h"
 
-/*** CONSTANTS ***/
+/* Constants
+/* ---------------------------------------------------------------------------*/
 #define LED_TYPE WS2812B
 #define COLOR_ORDER GRB
 
@@ -25,7 +28,8 @@
 #define BRIGHTNESS 255
 #define ANIMATION_SPEED 120
 
-/*** SETUP ***/
+/* Setup
+/* ---------------------------------------------------------------------------*/
 CRGB horn_leds[NUM_HORN_LEDS];
 CRGB face_leds[NUM_FACE_LEDS];
 CRGB wing_leds[NUM_WING_LEDS];
@@ -41,27 +45,4 @@ void setup() {
 
   // set master brightness control
   FastLED.setBrightness(BRIGHTNESS);
-}
-
-
-
-void loop()
-{
-
-  // send the 'leds' array out to the actual LED strip
-  FastLED.show();
-  // insert a delay to keep the framerate modest
-  FastLED.delay(1000/ANIMATION_SPEED);
-
-  // do some periodic updates
-//EVERY_N_MILLISECONDS( 20 ) {  } // slowly cycle the "base color" through the rainbow
-  //EVERY_N_SECONDS( 10 ) { nextPattern(); } // change patterns periodically
-}
-
-#define ARRAY_SIZE(A) (sizeof(A) / sizeof((A)[0]))
-
-void rainbow()
-{
-  // FastLED's built-in rainbow generator
-  //fill_rainbow( leds, NUM_LEDS, gHue, 7);
 }
