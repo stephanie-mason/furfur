@@ -25,15 +25,17 @@ void select_animation(uint8_t curr_minute) {
         fill_board(10);
         break;
       case 20 ... 29:
-        current_antler_palette = BriteNoBlack_p;
-        current_face_palette = BriteNoBlack_p;
-        current_wing_palette = BriteNoBlack_p;
+        current_antler_palette = BriteWithBlack_p;
+        current_face_palette = Sunshine_p;
+        current_wing_palette = Sunshine_p;
         current_board_palette = BriteNoBlack_p;
 
-        fill_antlers(1);
-        fill_face(1);
-        fill_wings(1);
-        fill_board(1);      
+        fill_antlers(8);
+        fill_face(10);
+        fill_wings(6);
+        fill_board(1);  
+
+        animation_delay = 10;
         break;
       case 30 ... 39:
         current_antler_palette = Love_p;
