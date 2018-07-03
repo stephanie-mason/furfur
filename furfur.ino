@@ -10,6 +10,8 @@
 /* ---------------------------------------------------------------------------*/
 #include <Adafruit_CircuitPlayground.h>
 #include "FastLED.h"
+#include <Wire.h>
+#include "RTClib.h"
 
 /* Constants
 /* ---------------------------------------------------------------------------*/
@@ -28,6 +30,7 @@
 
 /* Variables
 /* ---------------------------------------------------------------------------*/
+RTC_PCF8523 rtc;
 uint8_t gHue = 0;
 uint8_t start_index = 0;
 uint8_t step_index = 4;
