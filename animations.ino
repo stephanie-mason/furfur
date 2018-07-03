@@ -19,13 +19,10 @@ void select_animation(uint8_t curr_minute) {
         current_wing_palette = Vaporwave_p;
         current_board_palette = Vaporwave_p;
 
-        fill_antlers(1);
+        fill_antlers(3);
         fill_face(1);
-        fill_wings(1);
-        fill_board(1);
-
-        //I think these cases will actually just update "target_pallete" once
-        // things are in place. probably the fill functions can just move to loop.
+        fill_wings(5);
+        fill_board(10);
         break;
       case 20 ... 29:
         current_antler_palette = BriteNoBlack_p;
