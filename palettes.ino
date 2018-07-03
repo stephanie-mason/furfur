@@ -1,7 +1,7 @@
 const TProgmemPalette16 pink_split_comp_p PROGMEM = {
   0xffffff, 0xf2daf0, 0xffccdd, 0xff99bb, // whites - pink
   0xf50052, 0xf50052, 0xf50052, 0xf50052, // base red
-  0x116688, 0x992288, 0x116688, 0x992288 // purple & teal
+  0x229999, 0x229999, 0x229999, 0x229999 // teal
 };
 
 const TProgmemPalette16 red_comp_p PROGMEM = {

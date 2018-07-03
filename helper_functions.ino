@@ -1,9 +1,21 @@
-void fill_antlers() {
-  fill_palette( antler_leds, NUM_ANTLER_LEDS, start_index, step_index, current_antler_palette, 255, LINEARBLEND);
+void fill_antlers()
+{   
+    uint8_t color_index = start_index;
+    
+    for( int i = NUM_ANTLER_LEDS - 1; i >= 0; i--) {
+        antler_leds[i] = ColorFromPalette( current_antler_palette, color_index, 255, LINEARBLEND);
+        color_index += step_index;
+    }
 }
 
-void fill_face() {
-  fill_palette( face_leds, NUM_FACE_LEDS, start_index, step_index, current_face_palette, 255, LINEARBLEND);
+void fill_face()
+{   
+    uint8_t color_index = start_index;
+    
+    for( int i = NUM_FACE_LEDS - 1; i >= 0; i--) {
+        face_leds[i] = ColorFromPalette( current_face_palette, color_index, 255, LINEARBLEND);
+        color_index += step_index;
+    }
 }
 
 void fill_wings() {
@@ -15,7 +27,7 @@ void fill_board() {
 }
 
 void step_forward() {
-  if (animation_state < 9) {
+  if (animation_state < 3) {
     animation_state++;
   } else {
     animation_state = 1;
@@ -26,6 +38,9 @@ void step_back() {
   if (animation_state > 1) {
     animation_state--;
   } else {
-    animation_state = 9;
+    animation_state = 3;
   }
 }
+
+
+

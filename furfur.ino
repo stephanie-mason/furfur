@@ -9,7 +9,6 @@
 /* Libraries
 /* ---------------------------------------------------------------------------*/
 #include <Adafruit_CircuitPlayground.h>
-#include "remote_codes.h"
 #include "FastLED.h"
 
 /* Constants
@@ -17,14 +16,14 @@
 #define LED_TYPE WS2812B
 #define COLOR_ORDER GRB
 
-#define ANTLER_DATA_PIN 6
-#define FACE_DATA_PIN 9
-#define WING_DATA_PIN 10
-#define BOARD_DATA_PIN 17
+#define ANTLER_DATA_PIN A1
+#define FACE_DATA_PIN A2
+#define WING_DATA_PIN A3
+#define BOARD_DATA_PIN 8
 
-#define NUM_ANTLER_LEDS 64
-#define NUM_FACE_LEDS 33
-#define NUM_WING_LEDS 24
+#define NUM_ANTLER_LEDS 22
+#define NUM_FACE_LEDS 23
+#define NUM_WING_LEDS 11
 #define NUM_BOARD_LEDS 10
 
 /* Variables
