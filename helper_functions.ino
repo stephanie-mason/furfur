@@ -1,25 +1,30 @@
 void fill_antlers()
-{   
-    uint8_t color_index = start_index;
-    
-    for( int i = NUM_ANTLER_LEDS - 1; i >= 0; i--) {
-        antler_leds[i] = ColorFromPalette( current_antler_palette, color_index, 255, LINEARBLEND);
-        color_index += step_index;
-    }
+{
+  uint8_t color_index = start_index;
+
+  for( int i = NUM_ANTLER_LEDS - 1; i >= 0; i--) {
+    antler_leds[i] = ColorFromPalette( current_antler_palette, color_index, 255, LINEARBLEND);
+    color_index += step_index;
+  }
 }
 
 void fill_face()
-{   
-    uint8_t color_index = start_index;
-    
-    for( int i = NUM_FACE_LEDS - 1; i >= 0; i--) {
-        face_leds[i] = ColorFromPalette( current_face_palette, color_index, 255, LINEARBLEND);
-        color_index += step_index;
-    }
+{
+  uint8_t color_index = start_index;
+
+  for( int i = NUM_FACE_LEDS - 1; i >= 0; i--) {
+    face_leds[i] = ColorFromPalette( current_face_palette, color_index, 255, LINEARBLEND);
+    color_index += step_index;
+  }
 }
 
 void fill_wings() {
-  fill_palette( wing_leds, NUM_WING_LEDS, start_index, step_index, current_wing_palette, 255, LINEARBLEND);
+  uint8_t color_index = start_index;
+
+  for( int i = NUM_WING_LEDS - 1; i >= 0; i--) {
+    wing_leds[i] = ColorFromPalette( current_wing_palette, color_index, 255, LINEARBLEND);
+    color_index += step_index;
+  }
 }
 
 void fill_board() {
@@ -41,6 +46,3 @@ void step_back() {
     animation_state = 3;
   }
 }
-
-
-

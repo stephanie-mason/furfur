@@ -1,12 +1,15 @@
 void select_animation() {
     switch(animation_state) {
       case 1:
-        /* Strand tests
-        /* -------------------------------------------------------------------------*/
-        fill_solid(antler_leds, NUM_ANTLER_LEDS, CRGB::Blue);
-        fill_solid(face_leds, NUM_FACE_LEDS, CRGB::Red);
-        fill_solid(wing_leds, NUM_WING_LEDS, CRGB::Green);
-        fill_rainbow(board_leds, NUM_BOARD_LEDS, gHue, 7);
+        current_antler_palette = red_mono_p;
+        current_face_palette = Rainbow_gp;
+        current_wing_palette = red_comp_p;
+        current_board_palette = Rainbow_gp;
+
+        fill_antlers();
+        fill_face();
+        fill_wings();
+        fill_board();
         break;
       case 2:
         current_antler_palette = red_mono_p;
