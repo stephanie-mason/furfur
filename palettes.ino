@@ -1,3 +1,26 @@
+const TProgmemPalette16 Blue_p PROGMEM =
+{  
+    CRGB::Blue,
+    CRGB::Blue,
+    CRGB::DarkBlue,
+    0x1d0291,
+
+    CRGB::Blue,
+    0x1d0291,
+    CRGB::DarkBlue,
+    CRGB::Blue,
+
+    CRGB::DarkBlue,
+    CRGB::Blue,
+    CRGB::Blue,
+    CRGB::Blue,
+
+    CRGB::Blue,
+    CRGB::Blue,
+    CRGB::DarkBlue,
+    CRGB::DarkBlue
+};
+
 const TProgmemPalette16 BriteNoBlack_p PROGMEM =
 {
   0x8202f9, // Bluer Purple
@@ -38,6 +61,53 @@ const TProgmemPalette16 BriteWithBlack_p PROGMEM =
   0x000000, // Black
   0x000000  // Black
 };
+
+const TProgmemPalette16 Cool_p PROGMEM =
+{  
+    CRGB::Aqua,
+    CRGB::Aqua,
+    CRGB::Blue,
+    CRGB::SpringGreen,
+
+    CRGB::Aqua,
+    CRGB::Blue,
+    CRGB::Blue,
+    CRGB::SpringGreen,
+
+    CRGB::Aqua,
+    CRGB::Aqua,
+    CRGB::Blue,
+    CRGB::SpringGreen,
+
+    CRGB::Aqua,
+    CRGB::SpringGreen,
+    CRGB::SpringGreen,
+    CRGB::Blue
+};
+
+const TProgmemPalette16 CoolDark_p PROGMEM =
+{  
+    CRGB::DarkBlue,
+    CRGB::DarkBlue,
+    CRGB::Blue,
+    CRGB::Blue,
+
+    CRGB::DarkBlue,
+    CRGB::DarkGreen,
+    CRGB::Blue,
+    CRGB::DarkGreen,
+
+    CRGB::DarkBlue,
+    CRGB::DarkBlue,
+    CRGB::Blue,
+    CRGB::DarkGreen,
+
+    CRGB::DarkBlue,
+    CRGB::DarkGreen,
+    CRGB::DarkGreen,
+    CRGB::DarkGreen
+};
+
 
 const TProgmemRGBPalette16 Lava_p PROGMEM =
 {

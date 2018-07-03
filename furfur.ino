@@ -31,17 +31,18 @@
 /* Variables
 /* ---------------------------------------------------------------------------*/
 RTC_PCF8523 rtc;
-uint8_t gHue = 0;
 uint8_t start_index = 0;
 uint8_t brightness = 255;
-uint8_t idle_brightness = 40;
 int animation_delay = 24;
 uint8_t animation_state = 1;
 
 /* Palette Declarations
 /* ---------------------------------------------------------------------------*/
+extern const TProgmemPalette16 Blue_p PROGMEM;
 extern const TProgmemPalette16 BriteNoBlack_p PROGMEM;
 extern const TProgmemPalette16 BriteWithBlack_p PROGMEM;
+extern const TProgmemPalette16 Cool_p PROGMEM;
+extern const TProgmemPalette16 CoolDark_p PROGMEM;
 extern const TProgmemPalette16 Lava_p PROGMEM;
 extern const TProgmemPalette16 Love_p PROGMEM;
 extern const TProgmemPalette16 Sunshine_p PROGMEM;
@@ -49,16 +50,23 @@ extern const TProgmemPalette16 Vaporwave_p PROGMEM;
 extern const TProgmemPalette16 WarmWhite_p PROGMEM;
 extern const TProgmemPalette16 White_p PROGMEM;
 
-CRGBPalette16 current_antler_palette;
-CRGBPalette16 current_face_palette;
-CRGBPalette16 current_eye_palette;
-CRGBPalette16 current_wing_palette;
-CRGBPalette16 current_board_palette;
+CRGBPalette16 current_antler_palette = Rainbow_gp;
+CRGBPalette16 current_face_palette = Love_p;
+CRGBPalette16 current_eye_palette = Rainbow_gp;
+CRGBPalette16 current_wing_palette = Love_p;
+CRGBPalette16 current_board_palette = White_p;
 
 CRGBPalette16 target_antler_palette;
 CRGBPalette16 target_face_palette;
+CRGBPalette16 target_eye_palette;
 CRGBPalette16 target_wing_palette;
 CRGBPalette16 target_board_palette;
+
+uint8_t antler_steps;
+uint8_t face_steps;
+uint8_t eye_steps;
+uint8_t wing_steps;
+uint8_t board_steps;
 
 
 // Note to self: Can set brightness of individual strips:
