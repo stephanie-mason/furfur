@@ -33,21 +33,24 @@
 RTC_PCF8523 rtc;
 uint8_t gHue = 0;
 uint8_t start_index = 0;
-uint8_t step_index = 4;
 uint8_t brightness = 255;
 uint8_t idle_brightness = 40;
-int animation_speed = 120;
+int animation_delay = 24;
 uint8_t animation_state = 1;
-boolean cycle_animations = true;
 
 /* Palette Declarations
 /* ---------------------------------------------------------------------------*/
-extern const TProgmemPalette16 pink_split_comp_p PROGMEM;
-extern const TProgmemPalette16 red_comp_p PROGMEM;
-extern const TProgmemPalette16 red_mono_p PROGMEM;
+extern const TProgmemPalette16 BriteNoBlack_p PROGMEM;
+extern const TProgmemPalette16 BriteWithBlack_p PROGMEM;
+extern const TProgmemPalette16 Love_p PROGMEM;
+extern const TProgmemPalette16 Purple_p PROGMEM;
+extern const TProgmemPalette16 Sunshine_p PROGMEM;
+extern const TProgmemPalette16 Vaporwave_p PROGMEM;
+extern const TProgmemPalette16 White_p PROGMEM;
 
 CRGBPalette16 current_antler_palette;
 CRGBPalette16 current_face_palette;
+CRGBPalette16 current_eye_palette;
 CRGBPalette16 current_wing_palette;
 CRGBPalette16 current_board_palette;
 

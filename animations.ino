@@ -1,40 +1,75 @@
-void select_animation() {
-    switch(animation_state) {
-      case 1:
-        current_antler_palette = red_mono_p;
-        current_face_palette = Rainbow_gp;
-        current_wing_palette = red_comp_p;
-        current_board_palette = Rainbow_gp;
+void select_animation(uint8_t curr_minute) { 
+    switch(curr_minute) {
+      case 0 ... 9:
+        current_antler_palette = Rainbow_gp;
+        current_face_palette = Love_p;
+        current_eye_palette = Rainbow_gp;
+        current_wing_palette = Love_p;
+        current_board_palette = White_p;
 
-        fill_antlers();
-        fill_face();
-        fill_wings();
-        fill_board();
+        fill_antlers(10);
+        fill_face(8);
+        fill_eyes(5);
+        fill_wings(4);
+        fill_board(1);
         break;
-      case 2:
-        current_antler_palette = red_mono_p;
-        current_face_palette = Rainbow_gp;
-        current_wing_palette = red_comp_p;
-        current_board_palette = Rainbow_gp;
+      case 10 ... 19:
+        current_antler_palette = Vaporwave_p;
+        current_face_palette = Vaporwave_p;
+        current_wing_palette = Vaporwave_p;
+        current_board_palette = Vaporwave_p;
 
-        fill_antlers();
-        fill_face();
-        fill_wings();
-        fill_board();
+        fill_antlers(1);
+        fill_face(1);
+        fill_wings(1);
+        fill_board(1);
 
         //I think these cases will actually just update "target_pallete" once
         // things are in place. probably the fill functions can just move to loop.
         break;
-      case 3:
-        current_antler_palette = Rainbow_gp;
-        current_face_palette = Rainbow_gp;
-        current_wing_palette = Rainbow_gp;
-        current_board_palette = Rainbow_gp;
+      case 20 ... 29:
+        current_antler_palette = BriteNoBlack_p;
+        current_face_palette = BriteNoBlack_p;
+        current_wing_palette = BriteNoBlack_p;
+        current_board_palette = BriteNoBlack_p;
 
-        fill_antlers();
-        fill_face();
-        fill_wings();
-        fill_board();      
+        fill_antlers(1);
+        fill_face(1);
+        fill_wings(1);
+        fill_board(1);      
+        break;
+      case 30 ... 39:
+        current_antler_palette = Love_p;
+        current_face_palette = Love_p;
+        current_wing_palette = Love_p;
+        current_board_palette = Love_p;
+
+        fill_antlers(1);
+        fill_face(1);
+        fill_wings(1);
+        fill_board(1);      
+        break;
+      case 40 ... 49:
+        current_antler_palette = Sunshine_p;
+        current_face_palette = Sunshine_p;
+        current_wing_palette = Sunshine_p;
+        current_board_palette = Sunshine_p;
+
+        fill_antlers(1);
+        fill_face(1);
+        fill_wings(1);
+        fill_board(1);      
+        break;
+      case 50 ... 59:
+        current_antler_palette = Purple_p;
+        current_face_palette = Purple_p;
+        current_wing_palette = Purple_p;
+        current_board_palette = Purple_p;
+
+        fill_antlers(1);
+        fill_face(1);
+        fill_wings(1);
+        fill_board(1);      
         break;
     }
 }

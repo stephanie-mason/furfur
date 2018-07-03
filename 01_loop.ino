@@ -4,21 +4,15 @@ void loop()
   /* -------------------------------------------------------------------------*/
   uint8_t hour = rtc.now().hour();
   uint8_t minute = rtc.now().minute();
+  uint8_t second = rtc.now().second();
   brightness = how_bright(hour);
-  
   start_index++;
-  EVERY_N_MILLISECONDS( 20 ) { gHue++; }
-  EVERY_N_SECONDS( 10 ) {
-    if (cycle_animations = true) {
-      step_forward();
-    }
-  }
-
+  
   /* Send the data to the strips
   /* -------------------------------------------------------------------------*/
-  select_animation();
-  FastLED.show();
-  //FastLED.delay(1000/animation_speed);
+  select_animation(0);
+  FastLED.show();  
+  FastLED.delay(animation_delay);
 }
 
 /* RTC Serial Debugging */
