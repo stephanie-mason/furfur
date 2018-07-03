@@ -12,6 +12,8 @@ void select_animation(uint8_t curr_minute) {
         fill_eyes(5);
         fill_wings(4);
         fill_board(1);
+
+        animation_delay = 24;
         break;
       case 10 ... 19:
         current_antler_palette = Vaporwave_p;
@@ -23,6 +25,8 @@ void select_animation(uint8_t curr_minute) {
         fill_face(1);
         fill_wings(5);
         fill_board(10);
+
+        animation_delay = 24;
         break;
       case 20 ... 29:
         current_antler_palette = BriteWithBlack_p;
@@ -38,15 +42,19 @@ void select_animation(uint8_t curr_minute) {
         animation_delay = 10;
         break;
       case 30 ... 39:
-        current_antler_palette = Love_p;
-        current_face_palette = Love_p;
-        current_wing_palette = Love_p;
-        current_board_palette = Love_p;
+        current_antler_palette = Lava_p;
+        current_face_palette = WarmWhite_p;
+        current_eye_palette = Lava_p;
+        current_wing_palette = Lava_p;
+        current_board_palette = Lava_p;
 
-        fill_antlers(1);
-        fill_face(1);
-        fill_wings(1);
-        fill_board(1);      
+        fill_antlers(9);
+        fill_face(2);
+        fill_eyes(10);
+        fill_wings(5);
+        fill_board(4);      
+
+        animation_delay = 24;
         break;
       case 40 ... 49:
         current_antler_palette = Sunshine_p;
@@ -60,10 +68,10 @@ void select_animation(uint8_t curr_minute) {
         fill_board(1);      
         break;
       case 50 ... 59:
-        current_antler_palette = Purple_p;
-        current_face_palette = Purple_p;
-        current_wing_palette = Purple_p;
-        current_board_palette = Purple_p;
+        current_antler_palette = Love_p;
+        current_face_palette = Love_p;
+        current_wing_palette = Love_p;
+        current_board_palette = Love_p;
 
         fill_antlers(1);
         fill_face(1);

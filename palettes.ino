@@ -39,6 +39,29 @@ const TProgmemPalette16 BriteWithBlack_p PROGMEM =
   0x000000  // Black
 };
 
+const TProgmemRGBPalette16 Lava_p PROGMEM =
+{
+    CRGB::Black,
+    CRGB::Maroon,
+    CRGB::Black,
+    CRGB::Maroon,
+
+    CRGB::DarkRed,
+    CRGB::Maroon,
+    CRGB::Black,
+    CRGB::DarkRed,
+
+    CRGB::DarkRed,
+    CRGB::DarkRed,
+    CRGB::Red,
+    CRGB::Yellow,
+
+    CRGB::Yellow,
+    CRGB::Orange,
+    CRGB::Red,
+    CRGB::DarkRed
+};
+
 const TProgmemPalette16 Love_p PROGMEM =
 {
     CRGB::Plum,
@@ -61,30 +84,6 @@ const TProgmemPalette16 Love_p PROGMEM =
     CRGB::Pink,    
     CRGB::LightCoral   
 };
-
-const TProgmemPalette16 Purple_p PROGMEM =
-{
-    CRGB::Purple,
-    CRGB::Purple,
-    CRGB::Purple,
-    CRGB::Purple,
-    
-    CRGB::Black,
-    CRGB::Black,
-    CRGB::Black,
-    CRGB::Black,
-    
-    CRGB::Purple,
-    CRGB::Purple,
-    CRGB::Purple,
-    CRGB::Purple,
-    
-    CRGB::Black,
-    CRGB::Black,
-    CRGB::Black,
-    CRGB::Black
-};
-
 
 const TProgmemPalette16 Sunshine_p PROGMEM =
 {
@@ -130,6 +129,29 @@ const TProgmemPalette16 Vaporwave_p PROGMEM =
   0x9505fc,
   0x7100fc, //BlueViolet
   0x7100fc
+};
+
+const TProgmemPalette16 WarmWhite_p PROGMEM =
+{
+    CRGB::LightYellow,
+    CRGB::LightYellow,    
+    CRGB::LightYellow,
+    CRGB::White,
+    
+    CRGB::Salmon,
+    CRGB::DarkOrange,
+    CRGB::LightSalmon,
+    CRGB::OrangeRed,
+    
+    CRGB::LightYellow,
+    CRGB::DarkSalmon,
+    CRGB::DarkOrange,
+    CRGB::LightSalmon,
+    
+    CRGB::Coral,    
+    CRGB::DarkSalmon,    
+    CRGB::Coral,    
+    CRGB::LightCoral   
 };
 
 const TProgmemPalette16 White_p PROGMEM =

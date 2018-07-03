@@ -42,10 +42,11 @@ uint8_t animation_state = 1;
 /* ---------------------------------------------------------------------------*/
 extern const TProgmemPalette16 BriteNoBlack_p PROGMEM;
 extern const TProgmemPalette16 BriteWithBlack_p PROGMEM;
+extern const TProgmemPalette16 Lava_p PROGMEM;
 extern const TProgmemPalette16 Love_p PROGMEM;
-extern const TProgmemPalette16 Purple_p PROGMEM;
 extern const TProgmemPalette16 Sunshine_p PROGMEM;
 extern const TProgmemPalette16 Vaporwave_p PROGMEM;
+extern const TProgmemPalette16 WarmWhite_p PROGMEM;
 extern const TProgmemPalette16 White_p PROGMEM;
 
 CRGBPalette16 current_antler_palette;

@@ -10,7 +10,7 @@ void loop()
   
   /* Send the data to the strips
   /* -------------------------------------------------------------------------*/
-  select_animation(20);
+  select_animation(30);
   FastLED.show();  
   FastLED.delay(animation_delay);
 }
