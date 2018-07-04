@@ -40,7 +40,7 @@ void loop()
 
   FastLED.show();
   FastLED.delay(animation_delay);
-  //FastLED.setBrightness(brightness);
+  FastLED.setBrightness(brightness);
 }
 
 /* RTC Serial Debugging */
