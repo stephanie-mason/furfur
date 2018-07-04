@@ -78,7 +78,7 @@ void select_animation(uint8_t curr_minute) {
       case 50 ... 59:
         target_antler_palette = BriteWithBlack_p;
         target_face_palette = Sunshine_p;
-        target_eye_palette = Sunshine_p;
+        target_eye_palette = WarmWhite_p;
         target_wing_palette = Sunshine_p;
         target_board_palette = BriteNoBlack_p;
 
@@ -87,7 +87,7 @@ void select_animation(uint8_t curr_minute) {
         target_wing_steps = 6;
         target_board_steps = 1;
 
-        animation_delay = 10;
+        animation_delay = 16;
         break;
     }
 }

@@ -33,6 +33,7 @@
 RTC_PCF8523 rtc;
 uint8_t start_hour;
 uint8_t start_minute;
+uint8_t start_second;
 uint8_t start_index = 0;
 uint8_t brightness = 255;
 uint8_t animation_delay = 24;
@@ -65,10 +66,10 @@ CRGBPalette16 target_board_palette;
 
 /* Palette Stepping
 /* ---------------------------------------------------------------------------*/
-uint8_t curr_antler_steps = 1;
-uint8_t curr_face_steps = 1;
-uint8_t curr_eye_steps = 1;
-uint8_t curr_wing_steps = 1;
+uint8_t curr_antler_steps = 10;
+uint8_t curr_face_steps = 8;
+uint8_t curr_eye_steps = 5;
+uint8_t curr_wing_steps = 4;
 uint8_t curr_board_steps = 1;
 
 uint8_t target_antler_steps;
