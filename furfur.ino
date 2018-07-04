@@ -3,7 +3,7 @@
 /* A great and mighty Earl, leader of twenty six legions of spirits.
 /* Creator of romantic love, tempests, storms and lightning.
 /* He speaks only lies, unless brought into a triangle wherein he speaks truth.
-/* AKA THE LIFE OF THE PARTY
+/* AKA THE LIFE OF THE PARTY ୧༼✿ ͡◕ д ◕͡ ༽୨
 /******************************************************************************/
 
 /* Libraries
@@ -31,10 +31,11 @@
 /* Variables
 /* ---------------------------------------------------------------------------*/
 RTC_PCF8523 rtc;
+uint8_t start_hour;
+uint8_t start_minute;
 uint8_t start_index = 0;
 uint8_t brightness = 255;
-int animation_delay = 24;
-uint8_t animation_state = 1;
+uint8_t animation_delay = 24;
 
 /* Palette Declarations
 /* ---------------------------------------------------------------------------*/
@@ -62,12 +63,16 @@ CRGBPalette16 target_eye_palette;
 CRGBPalette16 target_wing_palette;
 CRGBPalette16 target_board_palette;
 
-uint8_t antler_steps;
-uint8_t face_steps;
-uint8_t eye_steps;
-uint8_t wing_steps;
-uint8_t board_steps;
+/* Palette Stepping
+/* ---------------------------------------------------------------------------*/
+uint8_t curr_antler_steps;
+uint8_t curr_face_steps;
+uint8_t curr_eye_steps;
+uint8_t curr_wing_steps;
+uint8_t curr_board_steps;
 
-
-// Note to self: Can set brightness of individual strips:
-// https://github.com/FastLED/FastLED/wiki/Multiple-Controller-Examples
+uint8_t target_antler_steps;
+uint8_t target_face_steps;
+uint8_t target_eye_steps;
+uint8_t target_wing_steps;
+uint8_t target_board_steps;

@@ -12,7 +12,7 @@ void setup() {
   Serial.begin(57600);
 
   /* RTC Setup */
-  /* -------------------------------------------------------------------------*/  
+  /* -------------------------------------------------------------------------*/
   if (! rtc.begin()) { Serial.println("Couldn't find RTC"); while (1); }
   if (! rtc.initialized()) {
     Serial.println("RTC is NOT running!");
@@ -20,6 +20,8 @@ void setup() {
     //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   }
   DateTime start_time = rtc.now();
+  start_hour = start_time.hour();
+  start_minute = start_time.minute();
 
   /* Strip Setup */
   /* -------------------------------------------------------------------------*/

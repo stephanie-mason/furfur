@@ -41,18 +41,12 @@ void fill_board(uint8_t step_index) {
   fill_palette( board_leds, NUM_BOARD_LEDS, start_index, step_index, current_board_palette, 255, LINEARBLEND);
 }
 
-void step_forward() {
-  if (animation_state < 3) {
-    animation_state++;
-  } else {
-    animation_state = 1;
+void gradualStepChange(uint8_t curr_steps, uint8_t target_steps) {
+  if (curr_steps > target_steps) {
+    curr_steps--;
   }
-}
 
-void step_back() {
-  if (animation_state > 1) {
-    animation_state--;
-  } else {
-    animation_state = 3;
+  if (curr_steps < target_steps) {
+    curr_steps++;
   }
 }
