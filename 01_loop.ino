@@ -22,11 +22,13 @@ void loop()
   nblendPaletteTowardPalette( current_wing_palette, target_wing_palette, maxChanges);
   nblendPaletteTowardPalette( current_board_palette, target_board_palette, maxChanges);
 
-  gradualStepChange(curr_antler_steps, target_antler_steps);
-  gradualStepChange(curr_face_steps, target_face_steps);
-  gradualStepChange(curr_eye_steps, target_eye_steps);
-  gradualStepChange(curr_wing_steps, target_wing_steps);
-  gradualStepChange(curr_board_steps, target_board_steps);
+  EVERY_N_MILLISECONDS( 1000 ) {
+    curr_antler_steps = gradualStepChange(curr_antler_steps, target_antler_steps);
+    curr_face_steps = gradualStepChange(curr_face_steps, target_face_steps);
+    curr_eye_steps = gradualStepChange(curr_eye_steps, target_eye_steps);
+    curr_wing_steps = gradualStepChange(curr_wing_steps, target_wing_steps);
+    curr_board_steps = gradualStepChange(curr_board_steps, target_board_steps);
+  }
 
   /* Send the data to the strips
   /* -------------------------------------------------------------------------*/

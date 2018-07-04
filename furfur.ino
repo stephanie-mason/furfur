@@ -65,11 +65,11 @@ CRGBPalette16 target_board_palette;
 
 /* Palette Stepping
 /* ---------------------------------------------------------------------------*/
-uint8_t curr_antler_steps;
-uint8_t curr_face_steps;
-uint8_t curr_eye_steps;
-uint8_t curr_wing_steps;
-uint8_t curr_board_steps;
+uint8_t curr_antler_steps = 1;
+uint8_t curr_face_steps = 1;
+uint8_t curr_eye_steps = 1;
+uint8_t curr_wing_steps = 1;
+uint8_t curr_board_steps = 1;
 
 uint8_t target_antler_steps;
 uint8_t target_face_steps;

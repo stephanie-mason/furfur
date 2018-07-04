@@ -41,12 +41,14 @@ void fill_board(uint8_t step_index) {
   fill_palette( board_leds, NUM_BOARD_LEDS, start_index, step_index, current_board_palette, 255, LINEARBLEND);
 }
 
-void gradualStepChange(uint8_t curr_steps, uint8_t target_steps) {
+uint8_t gradualStepChange(uint8_t curr_steps, uint8_t target_steps) {
   if (curr_steps > target_steps) {
-    curr_steps--;
+    curr_steps = curr_steps - 1;
+    return curr_steps;
   }
-
   if (curr_steps < target_steps) {
-    curr_steps++;
-  }
+    curr_steps = curr_steps + 1;
+    return curr_steps;
+  }  
+  return target_steps; 
 }
