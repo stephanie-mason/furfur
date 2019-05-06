@@ -5,7 +5,10 @@ void loop()
   uint8_t hour = rtc.now().hour();
   uint8_t minute = rtc.now().minute();
   uint8_t second = rtc.now().second();
-  brightness = how_bright(hour, minute);
+
+  /* Uncomment for festivals - brightness calculated by time of day */
+  //brightness = how_bright(hour, minute);
+
   start_index++;
 
   /* Select Animation
